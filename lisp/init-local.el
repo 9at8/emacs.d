@@ -62,11 +62,15 @@
               (neotree-find file-name)))
       (message "Could not find git project root."))))
 
+(setq mac-option-modifier 'super)
 (global-set-key (kbd "s-b") 'neotree-project-dir)
 
 ;;; Atom one dark theme
 (require-package 'atom-one-dark-theme)
 (load-theme 'atom-one-dark t)
+
+;;; Show file diffs
+(add-hook 'after-init-hook 'diff-hl-margin-mode)
 
 ;;; Footer:
 (provide 'init-local)
