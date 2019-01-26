@@ -4,16 +4,26 @@
 
 ;;; Code:
 
+(defun load-init ()
+  "Set some things on initialization.
+\(load-init)"
 ;;; set font size which doesn't hurt my eyes
-(set-face-attribute 'default nil :font "Hack-13")
-
-(set-window-margins nil 0)
-
+  (set-face-attribute 'default nil :font "Hack-14")
+  (set-window-margins nil 0)
 ;;; always show line numbers
-(global-display-line-numbers-mode)
-
+  (global-display-line-numbers-mode)
 ;;; disable fringes - something like boundaries
-(set-fringe-style 0)
+  (set-fringe-style 0))
+
+(defun load-initd (frame)
+  "Set the font using set-font on the FRAME.
+\(set-fontd)"
+  (select-frame frame)
+  (load-init))
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions #'load-initd)
+  (load-init))
 
 ;;; highlight indent guides
 (require-package 'highlight-indent-guides)
