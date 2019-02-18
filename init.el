@@ -130,6 +130,8 @@
 (require 'init-folding)
 (require 'init-dash)
 (require 'init-racket)
+(require 'init-sml)
+(require 'init-fish)
 
 ;;(require 'init-twitter)
 ;; (require 'init-mu)

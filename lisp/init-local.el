@@ -82,6 +82,16 @@
 ;;; Show file diffs
 (add-hook 'after-init-hook 'diff-hl-margin-mode)
 
+;;; C things
+(setq c-default-style "linux"
+      c-basic-offset 8
+      tab-width 8)
+
+;;; Make sure ripgrep is installed
+(global-set-key (kbd "s-s") 'projectile-ripgrep)
+(require-package 'ripgrep)
+(require-package 'projectile-ripgrep)
+
 ;;; Footer:
 (provide 'init-local)
 
