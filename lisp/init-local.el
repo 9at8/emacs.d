@@ -28,8 +28,8 @@
 ;;; highlight indent guides
 (require-package 'highlight-indent-guides)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-responsive 'stack)
+(setq highlight-indent-guides-method 'column)
+(setq highlight-indent-guides-responsive 'top)
 
 ;;; Add some spacing between lines
 (setq-default line-spacing 5)
@@ -72,7 +72,7 @@
               (neotree-find file-name)))
       (message "Could not find git project root."))))
 
-(setq mac-option-modifier 'super)
+(setq mac-option-modifier 'meta)
 (global-set-key (kbd "s-b") 'neotree-project-dir)
 
 ;;; Atom one dark theme
@@ -83,9 +83,9 @@
 (add-hook 'after-init-hook 'diff-hl-margin-mode)
 
 ;;; C things
-(setq c-default-style "linux"
-      c-basic-offset 8
-      tab-width 8)
+(setq c-default-style "k&r"
+      c-basic-offset 4
+      tab-width 4)
 
 ;;; Make sure ripgrep is installed
 (global-set-key (kbd "s-s") 'projectile-ripgrep)
