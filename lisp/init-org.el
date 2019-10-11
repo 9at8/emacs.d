@@ -105,6 +105,12 @@ typical word processor."
       (writeroom-mode 0))))
 
 ;;(add-hook 'org-mode-hook 'buffer-face-mode)
+(add-hook 'org-mode-hook #'(lambda ()
+                             ;; make lines wrap around
+                             (visual-line-mode)
+                             ;; auto indent in org mode
+                             (org-indent-mode)
+                             ))
 
 
 (setq org-support-shift-select t)
