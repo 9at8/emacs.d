@@ -89,6 +89,10 @@
       c-basic-offset 4
       tab-width 4)
 
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++17")))
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++17")))
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-c/c++-gcc-executable "gcc-8")))
+
 ;;; Make sure ripgrep is installed
 (global-set-key (kbd "s-s") 'projectile-ripgrep)
 (require-package 'ripgrep)
