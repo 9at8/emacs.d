@@ -77,7 +77,9 @@
 
 ;;; Atom one dark theme
 (require-package 'atom-one-dark-theme)
-(load-theme 'atom-one-dark t)
+(require-package 'dracula-theme)
+;; (load-theme 'atom-one-dark t)
+(load-theme 'dracula)
 
 ;;; Show file diffs
 (add-hook 'after-init-hook 'diff-hl-margin-mode)
