@@ -7,12 +7,14 @@
 (defun load-init ()
   "Set some things on initialization.
 \(load-init)"
-;;; set font size which doesn't hurt my eyes
+  ;; set font size which doesn't hurt my eyes
   (set-face-attribute 'default nil :font "Hack-14")
   (set-window-margins nil 0)
-;;; always show line numbers
+  ;; always show line numbers
   (global-display-line-numbers-mode)
-;;; disable fringes - something like boundaries
+  ;; always wrap words
+  (global-visual-line-mode)
+  ;; disable fringes - something like boundaries
   (set-fringe-style 0))
 
 (defun load-initd (frame)
