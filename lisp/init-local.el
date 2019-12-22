@@ -8,7 +8,7 @@
   "Set some things on initialization.
 \(load-init)"
   ;; set font size which doesn't hurt my eyes
-  (set-face-attribute 'default nil :font "Hack-14")
+  (set-face-attribute 'default nil :font "Hack-12")
   (set-window-margins nil 0)
   ;; always show line numbers
   (global-display-line-numbers-mode)
