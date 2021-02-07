@@ -100,6 +100,9 @@
 (require-package 'ripgrep)
 (require-package 'projectile-ripgrep)
 
+;;; Set Ctrl+Left / Right to do word left / right
+(global-set-key (kbd "C-<left>") 'backward-word)
+(global-set-key (kbd "C-<right>") 'forward-word)
 ;;; Footer:
 (provide 'init-local)
 
