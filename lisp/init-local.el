@@ -8,7 +8,7 @@
   "Set some things on initialization.
 \(load-init)"
   ;; set font size which doesn't hurt my eyes
-  (set-face-attribute 'default nil :font "Hack-12")
+  (set-face-attribute 'default nil :font "Hack-11")
   (set-window-margins nil 0)
   ;; always show line numbers
   (global-display-line-numbers-mode)
@@ -81,7 +81,8 @@
 (require-package 'atom-one-dark-theme)
 (require-package 'dracula-theme)
 ;; (load-theme 'atom-one-dark t)
-(load-theme 'dracula)
+;; (load-theme 'dracula)
+(load-theme 'sanityinc-tomorrow-eighties)
 
 ;;; Show file diffs
 (add-hook 'after-init-hook 'diff-hl-margin-mode)
