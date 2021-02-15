@@ -421,6 +421,12 @@ typical word processor."
      (sql . t)
      (sqlite . t))))
 
+;; Soft line break at 90 chars
+(add-hook 'org-mode-hook
+          (lambda ()
+            (visual-fill-column-mode)
+            (set-variable 'fill-column 90)))
+
 
 (provide 'init-org)
 ;;; init-org.el ends here
